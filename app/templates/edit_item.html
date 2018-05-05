@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}编辑商品{% endblock title %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/edit_item.css">
+{% endblock css %}
+{% block js %}
+<script type="text/javascript" src="/static/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/edit_item.js"></script>
+{% endblock js %}
+{% block body %}
+<div class="edit_container">
+    <div class="edit_form_div">
+        <div>
+            <label>商品名称：</label>
+            <input type="text" id="item_name" placeholder="item_name">
+        </div>
+        <div>
+            <label>分类：</label>
+            <input type="text" id="item_category" placeholder="item_category">
+        </div>
+        <div>
+            <label>价格：</label>
+            <input type="number" id="item_price" placeholder="item_price">
+        </div>
+        <div>
+            <label>描述：</label>
+            <textarea id="item_describe" placeholder="item_describe"></textarea>
+        </div>
+    </div>
+    <button class="add_image_btn">添加图片<input type="file" accept="image/*" multiple></button>
+    <div class="item_images_container">
+    </div>
+    <div class="btn_container">
+        <button class="save_btn">保存</button>
+        <button class="publish_btn">发布</button>
+        <button class="cancel_publish_btn">撤销发布</button>
+    </div>
+</div>
+{% endblock body %}
